@@ -1,0 +1,86 @@
+/* Bottom Navigation Bar */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(17, 17, 35, 0.98);
+  border-top: 2px solid rgba(168, 85, 247, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 15px 0;
+  z-index: 1000;
+  box-shadow: 0 -5px 30px rgba(168, 85, 247, 0.2);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #9ca3af;
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  min-width: 70px;
+  position: relative;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(236, 72, 153, 0.1));
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-item:hover {
+  color: #ec4899;
+}
+
+.nav-item:hover::before {
+  opacity: 1;
+}
+
+.nav-item.active {
+  color: #a855f7;
+  background: rgba(168, 85, 247, 0.2);
+  box-shadow: 0 5px 20px rgba(168, 85, 247, 0.3);
+}
+
+.nav-item.active .nav-label {
+  font-weight: 700;
+  background: linear-gradient(135deg, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Responsive - keep at bottom on all screens */
+@media (min-width: 768px) {
+  .bottom-nav {
+    padding: 18px 0;
+  }
+
+  .nav-item {
+    padding: 12px 25px;
+  }
+
+  .nav-label {
+    font-size: 0.9rem;
+  }
+}
