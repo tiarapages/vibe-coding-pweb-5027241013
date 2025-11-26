@@ -245,9 +245,11 @@ Form input pengeluaran dengan:
 ### Calendar View
 Kalender interaktif yang menampilkan:
 - Total expenses per hari
-- List transaksi per tanggal
+- Detail List transaksi per tanggal
 - Edit & delete langsung
 <img width="1912" height="1052" alt="Screenshot 2025-11-26 144807" src="https://github.com/user-attachments/assets/751e62a1-ade6-4e6d-b969-06335ac5e3f3" />
+<img width="1902" height="854" alt="Screenshot 2025-11-26 144823" src="https://github.com/user-attachments/assets/3cf9cd89-ffe0-4c04-8306-634d5a837b23" />
+
 
 ### Wishlist
 Gallery wishlist dengan foto, harga target, dan estimasi waktu bisa beli.
