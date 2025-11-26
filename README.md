@@ -106,7 +106,7 @@ Kalkulator terintegrasi untuk hitung-hitungan cepat tanpa keluar aplikasi.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### **Frontend**
 **React**, **React Router DOM**, **Axios**, **Vite**, **Lucide React**, **CSS3**
@@ -119,145 +119,63 @@ Kalkulator terintegrasi untuk hitung-hitungan cepat tanpa keluar aplikasi.
 
 ---
 
-## Struktur Project
+### Setup Instructions
 
-```
-tugas_week13/
-│
-├── backend/                    # Backend Express API
-│   ├── models/                 # Database models
-│   │   ├── User.js            # User schema
-│   │   ├── Budget.js          # Budget schema
-│   │   ├── Transaction.js     # Transaction schema
-│   │   └── Wishlist.js        # Wishlist schema
-│   │
-│   ├── routes/                # API routes
-│   │   ├── auth.js            # Auth endpoints
-│   │   ├── budget.js          # Budget endpoints
-│   │   ├── transaction.js     # Transaction endpoints
-│   │   └── wishlist.js        # Wishlist endpoints
-│   │
-│   ├── middleware/            # Custom middleware
-│   │   ├── auth.js            # JWT verification
-│   │   └── upload.js          # Multer config
-│   │
-│   ├── uploads/               # Uploaded images
-│   ├── server.js              # Entry point
-│   └── package.json
-│
-├── frontend/                  # Frontend React App
-│   ├── src/
-│   │   ├── components/       # Reusable components
-│   │   │   ├── BottomNav.jsx
-│   │   │   └── ui/           # UI components
-│   │   │
-│   │   ├── pages/            # Page components
-│   │   │   ├── StartPage.jsx
-│   │   │   ├── Login.jsx
-│   │   │   ├── Register.jsx
-│   │   │   ├── BudgetSetup.jsx
-│   │   │   ├── Dashboard.jsx
-│   │   │   ├── Tracking.jsx
-│   │   │   ├── Calendar.jsx
-│   │   │   ├── Calculator.jsx
-│   │   │   └── Wishlist.jsx
-│   │   │
-│   │   ├── context/          # React Context
-│   │   │   └── AuthContext.jsx
-│   │   │
-│   │   ├── services/         # API services
-│   │   │   └── api.js
-│   │   │
-│   │   ├── styles/           # CSS files
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│   │
-│   ├── public/
-│   ├── index.html
-│   ├── vite.config.js
-│   └── package.json
-│
-└── README.md
-```
-
-
-
-### **2. Setup Backend**
-
+### **1. Setup Backend**
 ```
 npm run dev
 ```
 
 Backend akan running di: `http://localhost:5000`
 
-**Verifikasi Backend:**
-- Buka browser → `http://localhost:5000`
-- Jika muncul pesan API endpoints, backend berhasil!
-
-### **3. Setup Frontend**
+### **2. Setup Frontend**
 
 ```
 npm run dev
 ```
 
-Frontend akan running di: `http://localhost:5173`
-
-### **4. Akses Aplikasi**
-
 Buka browser dan akses: `http://localhost:5173`
 
 ---
 
-## Screenshots
+## Pages
 
-### Start Page
+- ### `/Start Page`
 Landing page dengan welcome message dan call-to-action untuk login/register.
-<img width="1898" height="1059" alt="Screenshot 2025-11-26 144439" src="https://github.com/user-attachments/assets/e15536cf-2c82-4766-bc59-52399a5ba44e" />
 
-### Register
+- ### `/Register`
 Form authentication dengan validasi dan error handling. Setup budget awal dan alokasi per kategori saat pertama kali registrasi.
-<img width="1903" height="1046" alt="Screenshot 2025-11-26 144501" src="https://github.com/user-attachments/assets/c96c378d-3e14-41a1-b4c1-b9a75a5198c9" />
 
-### Login
+- ### `/Login`
 Form authentication dengan validasi dan error handling.
-<img width="1908" height="1059" alt="Screenshot 2025-11-26 144511" src="https://github.com/user-attachments/assets/5248028e-bdd4-4f5e-aaab-fe7b91f9e8df" />
 
-### Dashboard
+- ### `/Dashboard`
 Main dashboard dengan:
-- Total budget & remaining balance
-- Today's expenses
-- Weekly spending chart
-- Category breakdown
-- Quick access menu
-<img width="1897" height="1023" alt="Screenshot 2025-11-26 144730" src="https://github.com/user-attachments/assets/bed03151-1546-43eb-8dad-7e6221e33926" />
+-Total budget & remaining balance
+-Today's expenses
+-Weekly spending chart
+-Category breakdown
+-Quick access menu
 
-<img width="1891" height="714" alt="Screenshot 2025-11-26 144741" src="https://github.com/user-attachments/assets/3615bfd2-8256-4182-be34-f1b46287946b" />
-
-### Transaction Tracking
+- ### `/Transaction Tracking`
 Form input pengeluaran dengan:
-- Date picker
-- Amount input dengan format currency
-- Category selection
-- Payment method
-- Notes
-<img width="1878" height="921" alt="Screenshot 2025-11-26 144754" src="https://github.com/user-attachments/assets/e0722822-ba58-4ada-83cc-0c183b650f36" />
+-Date picker
+-Amount input dengan format currency
+-Category selection
+-Payment method
+-Notes
 
-### Calendar View
+- ### `/Calendar View`
 Kalender interaktif yang menampilkan:
-- Total expenses per hari
-- Detail List transaksi per tanggal
-- Edit & delete langsung
-<img width="1912" height="1052" alt="Screenshot 2025-11-26 144807" src="https://github.com/user-attachments/assets/751e62a1-ade6-4e6d-b969-06335ac5e3f3" />
-<img width="1902" height="854" alt="Screenshot 2025-11-26 144823" src="https://github.com/user-attachments/assets/3cf9cd89-ffe0-4c04-8306-634d5a837b23" />
+-Total expenses per hari
+-Detail List transaksi per tanggal
+-Edit & delete langsung
 
-
-### Wishlist
+- ### `/Wishlist`
 Gallery wishlist dengan foto, harga target, dan estimasi waktu bisa beli.
-<img width="1894" height="904" alt="Screenshot 2025-11-26 145004" src="https://github.com/user-attachments/assets/0d4e68be-19d1-442a-9f28-efc0b0206495" />
 
-### Calculator
+- ### `/Calculator`
 Kalkulator built-in untuk hitung-hitungan cepat.
-<img width="1913" height="686" alt="Screenshot 2025-11-26 144836" src="https://github.com/user-attachments/assets/04373b3a-e48b-4337-9ba8-d9a02b46678a" />
 
 ---
 
